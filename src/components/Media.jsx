@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import './Intervalo.css';
 import Card from './Card';
 
@@ -14,6 +16,13 @@ const Media = (props) => {
             </div>
         </Card>
     );
-}
+};
 
-export default Media;
+const mapStateToProps = (state) => {
+    return {
+        minimo: state.numeros.min,
+        maximo: state.numeros.max
+    };
+};
+
+export default connect(mapStateToProps)(Media);

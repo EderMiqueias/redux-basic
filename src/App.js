@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 
 import Media from './components/Media';
@@ -8,24 +8,16 @@ import Intervalo from './components/Intervalo';
 
 
 function App() {
-  const [min, setMin] = useState(1);
-  const [max, setMax] = useState(10);
-
   return (
     <div className="App">
       <h1>Exercício Redux</h1>
       <div className="linha">
-        <Intervalo
-          minimo={min}
-          maximo={max}
-          onMinChanged={(value) => setMin(value)}
-          onMaxChanged={(value) => setMax(value)}
-        />
+        <Intervalo />
       </div>
       <div className="linha">
-        <Media minimo={min} maximo={max} />
-        <Soma minimo={min} maximo={max} />
-        <Sorteio minimo={min} maximo={max} />
+        <Media />
+        <Soma />
+        <Sorteio />
       </div>
     </div>
   );
