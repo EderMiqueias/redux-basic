@@ -1,5 +1,8 @@
 import './App.css';
-import Card from './components/Card'
+import Media from './components/Media';
+import Soma from './components/Soma';
+import Sorteio from './components/Sorteio';
+import Intervalo from './components/Intervalo';
 
 
 function App() {
@@ -7,20 +10,12 @@ function App() {
     <div className="App">
       <h1>Exercício Redux</h1>
       <div className="linha">
-        <Card title="Card 1" green>
-          AAAAAAAAA
-        </Card>
-        <Card title="Card 2" purple>
-          BBBBBBBBBB
-        </Card>
+        <Intervalo></Intervalo>
       </div>
       <div className="linha">
-        <Card title="Card 3" red>
-          CCCCCCCCCC
-        </Card>
-        <Card title="Card 4" blue>
-          DDDDDDDDDD
-        </Card>
+        <Media minimo={0} maximo={10} />
+        <Soma minimo={0} maximo={10} />
+        <Sorteio minimo={0} maximo={10} />
       </div>
     </div>
   );
